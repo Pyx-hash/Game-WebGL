@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" integrity="sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Game Gallery WebGL</title>
+</head>
+<body class="min-h-screen flex flex-col items-center p-6">
+    <header class="text-center my-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-pink-600 mb-2">WebGL Game Gallery</h1>
+        <p class="text-lg text-pink-800">
+            A collection of adorable games & demo's
+        </p>
+    </header>
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4 max-w-6xl w-full">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <canvas id="webgl-canvas"></canvas>
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-pink-700 mb-2">Live 3D Cube!</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">A real, live WebGL canvas! This spinning cube is rendered right in your browser using three.js</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="#" target="_blank" class="flex-1 text-center bg-pink-500 text-white font-bold pt-3 px-4 rounded-lg hover:bg-pink-600 transition-all duration-200 shadow-md hover:shadow-lg">
+                        Download (Demo)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <img src="download/Bowling Online 2/icon.png" alt="Bowling Online 2" class="w-full h-48 w-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-green-700 mb-2">Bowling Online 2</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">Play bowling against your friends. Customize the wie range of look of balls, pins, and alleys. Tune ball weight while customizing. Switch different ball release systems.</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="download/Bowling Online 2/Bowling Online 2.apk" target="_blank" class="flex-1 text-center bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 transition-all duration-200 shadow-md hover:shadow-lg">Download</a>
+                    <a href="https://iliagrigorevdev.github.io/bowlingonline2/" target="_blank" class="download-btn flex-1 text-center bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition-all duration-200 shadow-md hover:shadow-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <img src="download/The Cube/icon.jpg" alt="The Cube" class="w-full h-48 w-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-rose-700 mb-2">The Cube</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">The application tracks and displays performance statistics, including the total number of solves, best and worst times, and the average times over 5, 12, and 25 solves, rather than being a game itself.</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="download/The Cube/The Cube.apk" target="_blank" class="flex-1 text-center bg-rose-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-rose-600 transition-all duration-200 shadow-md hover:shadow-lg">Download</a>
+                    <a href="https://the-cube-gamev.netlify.app/" target="_blank" class="download-btn flex-1 text-center bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition-all duration-200 shadow-md hover:shadow-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <img src="download/Asteroid Shooter/icon.jpg" alt="Asteroid Shooter" class="w-full h-48 w-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-rose-700 mb-2">Asteroid Shooter</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">The Asteroid Shooter is an arcade classic where the player pilots a spacecraft to destroy progressively difficult waves of asteroids and enemy ships while avoiding collisions to achieve the highest possible score.</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="download/Asteroid Shooter/Asteroid Shooter.apk" target="_blank" class="flex-1 text-center bg-indigo-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-600 transition-all duration-200 shadow-md hover:shadow-lg">Download</a>
+                    <a href="https://asteroid-shooter-game-beta.netlify.app/" target="_blank" class="download-btn flex-1 text-center bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition-all duration-200 shadow-md hover:shadow-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <img src="download/Tic Tac Toe 1.0/icon.png" alt="Tic Tac Toe" class="w-full h-48 w-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-rose-700 mb-2">Tic Tac Toe (AI)</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">This is an implementation of Tic-Tac-Toe, a classic two-player game where you compete against a bot to be the first to mark three of your symbols (X or O) in a row, column, or diagonal on a 3x3 grid.</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="download/Tic Tac Toe 1.0/Tic Tac Toe 1.0.apk" target="_blank" class="flex-1 text-center bg-rose-500 text-white font-bold py-4 px-4 rounded-lg hover:bg-rose-600 transition-all duration-200 shadow-md hover:shadow-lg">Download</a>
+                    <a href="https://tic-tac-toe-beta.netlify.app/" target="_blank" class="download-btn flex-1 text-center bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition-all duration-200 shadow-md hover:shadow-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col">
+            <img src="download/Cosmic Defenders/icon.jpg" alt="Cosmic Defenders" class="w-full h-48 w-48 object-cover">
+            <div class="p-6 flex flex-col flex-grow">
+                <h2 class="text-2xl font-bold text-rose-700 mb-2">Cosmic Defenders (BETA)</h2>
+                <p class="text-gray-600 mb-4 text-sm leading-relaxed flex-grow">Cosmic Defenders is an exciting 3D space shooter game built with Three.js. Navigate through an asteroid field, destroy incoming threats, and collect power-ups to survive as long as possible!</p>
+                <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                    <a href="download/Cosmic Defenders/Cosmic Defenders.apk" target="_blank" class="flex-1 text-center bg-rose-500 text-white font-bold py-4 px-4 rounded-lg hover:bg-rose-600 transition-all duration-200 shadow-md hover:shadow-lg">Download</a>
+                    <a href="https://cosmic-defenders.netlify.app/" target="_blank" class="download-btn flex-1 text-center bg-gray-200 text-gray-700 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition-all duration-200 shadow-md hover:shadow-lg">Play Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
